@@ -1,0 +1,44 @@
+package archivos;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		// creamos el objeto File que representa al archivo en memoria
+		File f1 = new File("src/achivo.txt");
+		File f2 = new File("/direc");
+		FileWriter writer = new FileWriter(f1,true);
+		BufferedWriter bwr = new BufferedWriter(writer);
+		
+		
+		try {
+			//creamos el archivo SI todavia no existe fisicamente
+			writer = new FileWriter(f1,true);
+			bwr = new BufferedWriter(writer);
+			System.out.println(f1.isFile());
+			f1.createNewFile();
+			bwr.write("Escribiendo desde el buffer");
+			bwr.close();
+		
+			FileReader reader = new FileReader(f1);
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		finally{
+			bwr.close();
+		}
+		
+		
+		
+		
+
+	}
+
+}

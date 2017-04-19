@@ -1,0 +1,13 @@
+package genericos;
+
+public class Box{
+	
+
+
+	
+	public <M> M metodoGenerico(M o){
+		
+		return M;
+	}
+
+}

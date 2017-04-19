@@ -1,0 +1,16 @@
+package genericos;
+
+public class Box{
+	
+
+	
+	public T getValor(){
+		return valor;
+	}
+	
+	public <M> M metodoGenerico(){
+		
+		return M;
+	}
+
+}

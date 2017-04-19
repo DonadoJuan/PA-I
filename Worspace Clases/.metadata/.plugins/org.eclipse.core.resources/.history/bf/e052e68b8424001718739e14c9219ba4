@@ -1,0 +1,15 @@
+package genericos;
+
+public class Box <T,B,Z,Q,W>{
+	
+	private T valor;
+	
+	public void setValor(T o){
+		this.valor = o;
+	}
+	
+	public T getValor(){
+		return valor;
+	}
+
+}

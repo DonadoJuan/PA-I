@@ -1,0 +1,56 @@
+package archivos;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		// creamos el objeto File que representa al archivo FISICO en memoria
+		File f1 = new File("src/achivo.txt");
+		File f2 = new File("/direc"); 
+		
+		//Escritura
+		try(BufferedWriter bw = new BufferedWriter(new FileWriter(f1,false))){
+			f1.createNewFile();
+			//creamos el archivo SI todavia no existe fisicamente
+			System.out.println(f1.isFile());
+			//creamos el archivo SI todavia no existe fisicamente
+			bw.write("Escribiendo desde el buffer con try con recursos");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		//Lectura
+		try(BufferedReader br = new BufferedReader(new FileReader(f1))){
+			
+			String s = br.readLine();
+			while(s != null){
+				System.out.println(s);
+				s = br.readLine();
+			}
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		//Stream
+		
+		File pdf = new File("src/mipdf.pdf");
+		FileInputStream fs = new FileInputStream(pdf); 
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

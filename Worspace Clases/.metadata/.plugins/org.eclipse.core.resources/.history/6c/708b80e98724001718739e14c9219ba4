@@ -1,0 +1,24 @@
+package genericos;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Box<Float> box1 = new Box<>();
+		 
+		box1.setValor(20f);
+		
+		System.out.println(box1.getValor());
+		
+		List <Persona> list = new ArrayList()<>();
+		
+		
+		
+		
+		
+	}
+
+}
