@@ -1,0 +1,36 @@
+package state;
+
+public class Alumno {
+	
+	private String nombre;
+	private String apellido;
+	private String legajo;
+	private estadoCarrera estado;
+	private IEstadoCarrera estadoCarrera;
+
+	public void setEstadoCarrera(IEstadoCarrera estadoCarrera) {
+		this.estadoCarrera = estadoCarrera;
+	}
+
+	public Alumno(String nombre, String apellido, String legajo, state.estadoCarrera estado,
+			IEstadoCarrera estadoCarrera) {
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.legajo = legajo;
+		this.estado = estado;
+		this.estadoCarrera = estadoCarrera;
+	}
+	
+	public void setIEstadoCarrera(IEstadoCarrera ec){
+		this.estadoCarrera = ec;
+	}
+	
+	public void cambiarEstado(){
+		estadoCarrera.procesarEstado(this);
+	}
+	
+	
+	
+	
+	
+}

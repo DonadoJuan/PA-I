@@ -1,0 +1,5 @@
+package state;
+
+public iterface IEstadoCarrera {
+	void cambiarEstado(Alumno alu);
+}

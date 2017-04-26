@@ -1,0 +1,10 @@
+package state;
+
+public class Alumno {
+	
+	private String nombre;
+	private String apellido;
+	private String legajo;
+	private estadoCarrera estado;
+	
+}

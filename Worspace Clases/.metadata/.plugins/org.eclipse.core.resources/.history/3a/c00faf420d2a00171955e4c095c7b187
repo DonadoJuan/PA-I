@@ -1,0 +1,8 @@
+package factory;
+
+public class SueldoMensual implements ICalculoSueldo{
+	
+	public Double sueldoMensual(){
+		return sueldo;
+	}
+}

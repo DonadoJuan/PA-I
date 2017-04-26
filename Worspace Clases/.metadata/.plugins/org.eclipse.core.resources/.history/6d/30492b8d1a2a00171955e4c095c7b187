@@ -1,0 +1,13 @@
+package state;
+
+public class Ingreso implements IEstadoCarrera {
+
+	@Override
+	public void procesarEstado(Alumno alu) {
+		alu.setEstadoCarrera(new Regular());
+		System.out.println("Cargando en BD a " +  );
+	}
+	
+	
+
+}

@@ -1,0 +1,32 @@
+package factory;
+
+public class Empleado implements ICalculoSueldo {
+	
+	private String nombre;
+	private String apellido;
+	private String cuil;
+	private String estado;
+	private Double sueldo;
+	private Double cantidadHorasTrabajadas;
+	private TipoCobro tipoCobro;
+	
+	@Override
+	private double calcular(TipoCobro tc){
+		if(tc == TipoCobro.mensual)
+			return sueldo;
+		else
+			return  sueldo*cantidadHorasTrabajadas;
+	}
+	
+	@Override
+	private double calcular(TipoCobro tc){
+		if(tc == TipoCobro.mensual)
+			return sueldo;
+		else
+			return  sueldo*cantidadHorasTrabajadas;
+	}
+	
+	
+	
+	
+}

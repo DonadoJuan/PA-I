@@ -1,0 +1,14 @@
+package factory;
+
+public class Empleado {
+	
+	private String nombre;
+	private String apellido;
+	private String cuil;
+	private String estado;
+	private Double sueldo;
+	private Double cantidadHorasTrabajadas;
+	private TipoCobro tipoCobro;
+	
+	
+}

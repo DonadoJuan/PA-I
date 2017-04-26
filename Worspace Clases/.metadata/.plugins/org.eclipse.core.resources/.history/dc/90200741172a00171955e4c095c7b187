@@ -1,0 +1,5 @@
+package state;
+
+public interface IEstadoCarrera {
+	void cambiarEstado(Alumno alu);
+}

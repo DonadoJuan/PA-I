@@ -1,0 +1,13 @@
+package main;
+
+import factory.Empleado;
+import factory.TipoCobro;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Empleado emp1 = new Empleado("Juan","Donado","38613611","Activo",45620D,23D,TipoCobro.mensual);
+	}
+
+}

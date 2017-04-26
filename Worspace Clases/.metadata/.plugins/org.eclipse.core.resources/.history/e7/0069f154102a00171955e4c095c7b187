@@ -1,0 +1,17 @@
+package main;
+
+import factory.Empleado;
+import factory.Factory;
+import factory.ICalculoSueldo;
+import static factory.TipoCobro.mensual;
+import static factory.TipoCobro.porHora;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Empleado emp1 = new Empleado("Juan","Donado","38613611","Activo",45620D,23D,mensual);
+		ICalculoSueldo cs = Factory.calcular(mensual);
+	}
+
+}

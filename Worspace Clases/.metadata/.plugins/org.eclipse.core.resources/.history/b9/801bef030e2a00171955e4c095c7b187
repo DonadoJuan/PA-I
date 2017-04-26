@@ -1,0 +1,9 @@
+package factory;
+
+public class SueldoPorHora implements ICalculoSueldo {
+
+	@Override
+	public Double calcular() {
+
+	}
+}

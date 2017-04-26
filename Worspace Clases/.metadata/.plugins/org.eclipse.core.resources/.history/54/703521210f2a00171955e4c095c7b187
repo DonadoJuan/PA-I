@@ -1,0 +1,11 @@
+package factory;
+
+public class Factory {
+	
+	
+	public Double calcular(Empleado emp){
+		
+		if(emp.getTipoCobro() == TipoCobro.mensual)
+			return new SueldoMensual();
+	}
+}
