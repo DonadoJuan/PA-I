@@ -1,0 +1,9 @@
+
+public class MiThread implements Runnable {
+	
+	public void Run(){
+		for (int i = 0; i < 6; i++) {
+			System.out.println("INDICE" + i);
+		}
+	}
+}

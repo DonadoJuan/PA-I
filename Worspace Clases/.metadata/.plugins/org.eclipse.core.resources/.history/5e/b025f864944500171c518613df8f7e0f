@@ -1,0 +1,18 @@
+import java.util.Iterator;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Thread t1 = new Thread(new MiThread());
+		Thread t2 = new Thread(new MiThread());
+		t1.setPriority(10);
+		t2.setPriority(1);
+		
+		t1.start();
+		t2.start();
+		
+		
+	}
+
+}

@@ -8,7 +8,7 @@ public class Alumno {
 	private estadoCarrera estado;
 	private IEstadoCarrera estadoCarrera;
 
-	public Alumno(String nombre, String apellido, String legajo, state.estadoCarrera estado) {
+	public Alumno(String nombre, String apellido, String legajo, estadoCarrera estado) {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.legajo = legajo;

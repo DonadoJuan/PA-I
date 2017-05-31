@@ -1,0 +1,19 @@
+import java.util.Iterator;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Thread t1 = new Thread(new MiThread("Hilo prioridad alta"));
+		Thread t2 = new Thread(new MiThread("Hilo prioridad baja"));
+		t1.setPriority(10);
+		t2.setPriority(1);
+		
+		t1.start();
+		t1.interrupt();
+		t2.start();
+		
+		
+	}
+
+}
