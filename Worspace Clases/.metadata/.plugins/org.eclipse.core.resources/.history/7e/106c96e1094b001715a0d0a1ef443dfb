@@ -1,0 +1,42 @@
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Class c = new Persona().getClass();
+		c = Persona.class;
+		try {
+			c = Class.forName("Persona");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		for(Field f: c.getDeclaredFields()){
+			//System.out.println(f.getName());
+		}
+		
+		Persona p1 = new Persona();
+		p1.setNombre("Juan");
+		p1.setNombre("Donado");
+		p1.setDni(38613611L);
+
+		for(Method m: c.getDeclaredMethods()){
+			
+			if(m.getName().startsWith("get")){
+				
+				try {
+					System.out.println(m.invoke(p1, new Object[0]));
+				} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+					
+				}
+				
+			}
+		}
+
+	}
+
+}
